@@ -7,11 +7,20 @@ import Welcome from "./components/(pages)/Welcome";
 export default function Home() {
   return (
     <div className="flex items-center justify-center flex-col min-h-screen p-8 pb-20  sm:p-20 ">
-      <Navbar />
+      <section id="home" className="snap-start">
+
       <Welcome />
-      <About />
-      <Education />
-      <Projects />
+      </section>
+      <section id="about" className="snap-start">
+        <About />
+      </section>
+      <section id="education" className="snap-start">
+        <Education />
+      </section>
+      <section id="projects" className="snap-start">
+        <Projects />
+      </section>
+      <Navbar />
     </div>
   );
 }
