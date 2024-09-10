@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import ProjectImageCard from "../(images)/ProjectImageCard";
 
 const Projects = () => {
   const textScreen =
@@ -12,74 +12,36 @@ const Projects = () => {
       <h1 className="font-manrope text-5xl">Projects</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10  items-center justify-center sm:pl-4">
-        <div className="flex flex-col gap-0 items-center justify-center">
-          <Image
-            src={"/images/screen_image.png"}
-            alt={"Project Image"}
-            layout="responsive"
-            width={200}
-            height={200}
-            className="object-cover border-solid border-2 border-[#52525b]"
-          />
-          <p className="font-nunito w-[90%] sm:w-[80%]">{textScreen}</p>
-        </div>
-
-        <div className="flex flex-col gap-0 items-center justify-center">
-          <Image
-            src={"/images/screen_image.png"}
-            alt={"Project Image"}
-            layout="responsive"
-            width={200}
-            height={200}
-            className="object-cover  border-solid border-2 border-[#52525b]"
-          />
-          <p className="font-nunito w-[90%] sm:w-[80%]">{textScreen}</p>
-        </div>
-        <div className="flex flex-col gap-0 items-center justify-center">
-          <Image
-            src={"/images/screen_image.png"}
-            alt={"Project Image"}
-            layout="responsive"
-            width={200}
-            height={200}
-            className="object-cover border-solid border-2 border-[#52525b]"
-          />
-          <p className="font-nunito w-[90%] sm:w-[80%]">{textScreen}</p>
-        </div>
-
-        <div className="flex flex-col gap-0 items-center justify-center">
-          <Image
-            src={"/images/phone_image.png"}
-            alt={"Project Image"}
-            layout="static"
-            width={200}
-            height={200}
-            className="object-contain  border-solid border-2 border-[#52525b]"
-          />
-          <p className="font-nunito w-[90%] sm:w-[80%]">{textPhone}</p>
-        </div>
-        <div className="flex flex-col gap-0 items-center justify-center">
-          <Image
-            src={"/images/phone_image.png"}
-            alt={"Project Image"}
-            layout="static"
-            width={200}
-            height={200}
-            className="object-contain  border-solid border-2 border-[#52525b]"
-          />
-          <p className="font-nunito w-[90%] sm:w-[80%]">{textPhone}</p>
-        </div>
-                <div className="flex flex-col gap-0 items-center justify-center">
-          <Image
-            src={"/images/phone_image.png"}
-            alt={"Project Image"}
-            layout="static"
-            width={200}
-            height={200}
-            className="object-contain  border-solid border-2 border-[#52525b]"
-          />
-          <p className="font-nunito w-[90%] sm:w-[80%]">{textPhone}</p>
-        </div>
+        <ProjectImageCard
+          imageUrl="/images/screen_image.png"
+          textDescription={textScreen}
+          layout="responsive"
+        />
+        <ProjectImageCard
+          imageUrl="/images/screen_image.png"
+          textDescription={textScreen}
+          layout="responsive"
+        />
+        <ProjectImageCard
+          imageUrl="/images/screen_image.png"
+          textDescription={textScreen}
+          layout="responsive"
+        />
+        <ProjectImageCard
+          imageUrl="/images/phone_image.png"
+          textDescription={textPhone}
+          layout="static"
+        />
+        <ProjectImageCard
+          imageUrl="/images/phone_image.png"
+          textDescription={textPhone}
+          layout="static"
+        />
+        <ProjectImageCard
+          imageUrl="/images/phone_image.png"
+          textDescription={textPhone}
+          layout="static"
+        />
       </div>
     </div>
   );
