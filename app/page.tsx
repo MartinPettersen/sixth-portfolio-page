@@ -1,7 +1,8 @@
 import Navbar from "./components/(navigation)/Navbar";
-import About from "./pages/About";
-import Education from "./pages/Education";
-import Welcome from "./pages/Welcome";
+import About from "./components/(pages)/About";
+import Education from "./components/(pages)/Education";
+import Projects from "./components/(pages)/Projects";
+import Welcome from "./components/(pages)/Welcome";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Welcome />
       <About />
       <Education />
+      <Projects />
     </div>
   );
 }

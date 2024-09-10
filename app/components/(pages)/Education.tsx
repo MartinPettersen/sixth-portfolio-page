@@ -15,7 +15,7 @@ const Education = () => {
     <div className="flex flex-col gap-20 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
       <h1 className="font-manrope text-5xl">Education</h1>
 
-      <div className="flex flex-col sm:flex-row gap-10  items-center justify-center pl-20">
+      <div className="flex flex-col sm:flex-row gap-10  items-center justify-center sm:pl-20">
         <div className="flex flex-col gap-4  ">
           <div className="text-lg">
             <h2>{headlineOne}</h2>
