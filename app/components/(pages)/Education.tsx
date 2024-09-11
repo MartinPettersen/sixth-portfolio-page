@@ -1,37 +1,45 @@
-import React from "react";
+import { getEducation } from "@/sanity/sanity-utils";
+import { Education as EducationType } from "@/types/Education";
+import React, { useEffect, useState } from "react";
 
 const Education = () => {
-  const headlineOne =
-    "Bachelor in Informatics: Programming and Networks(180sp)";
-  const placeOne = "University of Oslo";
-  const educationOne =
-    "Programming and data communication. Programmering of machines. Create systems, programs and applications. Develop computer systems, program systems and algorithms. Understanding how software and operating systems work.";
-  const headlineTwo = "Bachelor in Multimedia technology and design(180sp)";
-  const placeTwo = "University of Agder, Grimstad";
-  const educationTwo =
-    "Theoretical and practical foundation in technology and multimedia. Such as graphic design, 3D-visualization and animation, video and audio production, image processing, webdesign and interactive media design.";
+
+  const [education, setEducation] = useState<EducationType | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const educationInfo = await getEducation();
+      setEducation(educationInfo[0]);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="flex flex-col gap-20 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
       <h1 className="font-manrope text-5xl">Education</h1>
 
-      <div className="flex flex-col sm:flex-row gap-10  items-center justify-center sm:pl-20">
-        <div className="flex flex-col gap-4  ">
-          <div className="text-lg">
-            <h2>{headlineOne}</h2>
-            <h2>{placeOne}</h2>
+      {education ? (
+        <div className="flex flex-row items-center justify-center pl-28">
+          <div className="flex flex-col gap-4 ">
+            <div className="text-lg">
+              <h2>{education.secondBach}</h2>
+              <h2>{education.secondBachLocation}</h2>
+            </div>
+            <p className="font-nunito w-[90%] sm:w-[80%]">{education.secondBachInfo}</p>
           </div>
-          <p className="font-nunito w-[90%] sm:w-[80%]">{educationOne}</p>
-        </div>
 
-        <div className="flex flex-col gap-4 ">
-          <div className="text-lg">
-            <h2>{headlineTwo}</h2>
-            <h2>{placeTwo}</h2>
+          <div className="flex flex-col sm:flex-row gap-10  items-center justify-center sm:pl-20">
+            <div className="flex flex-col gap-4  ">
+              <div className="text-lg">
+                <h2>{education.firstBach}</h2>
+                <h2>{education.firstBachLocation}</h2>
+              </div>
+              <p className="font-nunito w-[90%] sm:w-[80%]">{education.firstBachInfo}</p>
+            </div>
           </div>
-          <p className="font-nunito w-[90%] sm:w-[80%]">{educationTwo}</p>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 };

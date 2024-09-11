@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  imageUrl: string;
+  imageUrl: any;
   textDescription: string;
   layout: string;
 };
