@@ -9,7 +9,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="font-manrope flex flex-row gap-6 fixed right-10 top-0 pt-4">
+    <div className="font-manrope flex flex-row gap-6 fixed right-10 top-0 pt-4 z-100">
       <h2
         className="hover:cursor-pointer"
         onClick={() => handleScrollTo("home")}

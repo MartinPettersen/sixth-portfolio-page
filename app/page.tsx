@@ -20,7 +20,6 @@ export default function Home() {
       <section id="projects" className="snap-start">
         <Projects />
       </section>
-      <Navbar />
     </div>
   );
 }
