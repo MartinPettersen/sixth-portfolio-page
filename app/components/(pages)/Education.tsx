@@ -20,9 +20,9 @@ const Education = () => {
       <h1 className="font-manrope text-5xl">Education</h1>
 
       {education ? (
-        <div className="flex flex-row items-center justify-center pl-28">
+        <div className="flex flex-col sm:flex-row items-center justify-center pl-28">
           <div className="flex flex-col gap-4 ">
-            <div className="text-lg">
+            <div className="text-lg flex flex-col" >
               <h2>{education.secondBach}</h2>
               <h2>{education.secondBachLocation}</h2>
             </div>
