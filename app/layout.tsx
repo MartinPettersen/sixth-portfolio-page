@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Manrope } from '@next/font/google'
-import { Nunito } from '@next/font/google'
+import { Manrope } from "@next/font/google";
+import { Nunito } from "@next/font/google";
 import Navbar from "./components/(navigation)/Navbar";
 
 const manrope = Manrope({
-  subsets: ["latin"], weight: "400",
+  subsets: ["latin"],
+  weight: "400",
   variable: "--font-manrope",
 });
 
 const nunito = Nunito({
-  subsets: ["latin"], weight: "400",
+  subsets: ["latin"],
+  weight: "400",
   variable: "--font-nunito",
 });
 
@@ -26,10 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} ${nunito.variable} antialiased`}
-      >
-      <Navbar />
+      <body className={`${manrope.variable} ${nunito.variable} antialiased`}>
+        <Navbar />
 
         {children}
       </body>
