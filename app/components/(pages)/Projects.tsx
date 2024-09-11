@@ -13,28 +13,21 @@ const Projects = () => {
       <h1 className="font-manrope text-5xl">Projects</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-60 gap-x-10  items-center justify-center sm:pl-4">
-        <Link href={`../Project/${"project one"}`}>
           <ProjectImageCard
             imageUrl="/images/screen_image.png"
             textDescription={textScreen}
             layout="responsive"
           />
-        </Link>
-        <Link href={`../Project/${"project two"}`}>
           <ProjectImageCard
             imageUrl="/images/screen_image.png"
             textDescription={textScreen}
             layout="responsive"
           />
-        </Link>
-        <Link href={`../Project/${"project three"}`}>
           <ProjectImageCard
             imageUrl="/images/screen_image.png"
             textDescription={textScreen}
             layout="responsive"
           />
-        </Link>
-        <Link href={`../Project/${"project four"}`}>
           <div className="flex items-center justify-center">
             <div className="w-[200px] h-[200px] flex items-center justify-center">
               <ProjectImageCard
@@ -44,8 +37,6 @@ const Projects = () => {
               />
             </div>
           </div>
-        </Link>
-        <Link href={`../Project/${"project four"}`}>
           <div className="flex items-center justify-center">
             <div className="w-[200px] h-[200px] flex items-center justify-center">
               <ProjectImageCard
@@ -55,8 +46,6 @@ const Projects = () => {
               />
             </div>
           </div>
-        </Link>
-        <Link href={`../Project/${"project four"}`}>
           <div className="flex items-center justify-center">
             <div className="w-[200px] h-[200px] flex items-center justify-center">
               <ProjectImageCard
@@ -66,7 +55,6 @@ const Projects = () => {
               />
             </div>
           </div>
-        </Link>
       </div>
     </div>
   );
