@@ -43,6 +43,7 @@ const CategoryShowcase = ({ label, category }: Props) => {
         </div>
       ) : null}
     </div>
+    
   );
 };
 
