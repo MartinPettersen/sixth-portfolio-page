@@ -9,9 +9,9 @@ const ProjectNavbar = () => {
   };
 
   return (
-    <div className="font-manrope text-sm flex flex-row gap-4 top-4 sticky  text-[#52525b]  z-50 p-2 rounded-full">
+    <div className="font-manrope text-sm flex flex-row gap-4 top-4 sticky  text-[#52525b]   z-50 p-2 rounded-full">
       <p
-        className="hover:cursor-pointer"
+        className="hover:cursor-pointer "
         onClick={() => handleNavigation("/#websites")}
       >
         Websites

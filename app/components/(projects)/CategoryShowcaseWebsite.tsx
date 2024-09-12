@@ -6,10 +6,9 @@ import { getProjectCategories } from "@/sanity/sanity-utils";
 type Props = {
   label: string;
   category: string;
-  gridNumber: number;
 };
 
-const CategoryShowcase = ({ label, category, gridNumber }: Props) => {
+const CategoryShowcase = ({ label, category }: Props) => {
   const [projects, setProjects] = useState<Project[] | null>();
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const CategoryShowcase = ({ label, category, gridNumber }: Props) => {
       <h1 className="font-manrope text-2xl">{label}</h1>
       {projects ? (
         <div
-          className={`grid grid-cols-1 sm:grid-cols-${gridNumber} gap-y-40 gap-x-20  items-center justify-center sm:pl-4`}
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-y-40 gap-x-20  items-center justify-center sm:pl-4`}
         >
 
           {projects.map((project, index) => (
@@ -36,6 +35,8 @@ const CategoryShowcase = ({ label, category, gridNumber }: Props) => {
             imageUrl={project.image}
             textDescription={project.projectInfo}
             layout="responsive"
+            slug={project.slug}
+            key={index}
             />
           ))}
         </div>

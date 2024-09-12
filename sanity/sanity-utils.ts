@@ -50,8 +50,10 @@ export async function getProjects(): Promise<Project[]> {
             projectInfo,
             information,
             tech,
-            image,
-            alt
+            githubLinks,
+            hostLinks,
+            "image": image.asset->url,
+            "alt": image.alt,
         }`
     )
 }
@@ -68,8 +70,10 @@ export async function getProject(slug: string): Promise<Project> {
             projectInfo,
             information,
             tech,
-            image,
-            alt
+            githubLinks,
+            hostLinks,
+            "image": image.asset->url,
+            "alt": image.alt,
         }`,
         { slug }
     )
@@ -86,8 +90,10 @@ export async function searchProject(searchTerm: string): Promise<Project[]> {
             projectInfo,
             information,
             tech,
-            image,
-            alt
+            githubLinks,
+            hostLinks,
+            "image": image.asset->url,
+            "alt": image.alt,
         }`,
         { searchTerm }
     )
@@ -105,8 +111,10 @@ export async function newestProject(): Promise<Project[]> {
             projectInfo,
             information,
             tech,
-            image,
-            alt
+            githubLinks,
+            hostLinks,
+            "image": image.asset->url,
+            "alt": image.alt,
         }`
     )
 }
@@ -122,8 +130,10 @@ export async function searchProjects(searchTerm: string): Promise<Project[]> {
             projectInfo,
             information,
             tech,
-            image,
-            alt
+            githubLinks,
+            hostLinks,
+            "image": image.asset->url,
+            "alt": image.alt,
         }`,
         { searchTerm }
     )
@@ -140,6 +150,8 @@ export async function getProjectCategories(categoryTerm: string): Promise<Projec
             projectInfo,
             information,
             tech,
+            githubLinks,
+            hostLinks,
             "image": image.asset->url,
             "alt": image.alt,
         }`,

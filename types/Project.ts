@@ -9,6 +9,8 @@ export type Project = {
     projectInfo: string;
     information: PortableTextBlock[];
     tech: string[];
+    githubLinks: string[];
+    hostLinks: string[];
     image: string;
     alt: string;
 }

@@ -1,36 +1,9 @@
-import React, { useEffect, useState } from "react";
-import ProjectImageCard from "../(images)/ProjectImageCard";
-import Link from "next/link";
-import { getProjectCategories, getProjects } from "@/sanity/sanity-utils";
-import { Project } from "@/types/Project";
+import React from "react";
 import CategoryShowcase from "../(projects)/CategoryShowcase";
 import CategoryShowcaseWebsite from "../(projects)/CategoryShowcaseWebsite";
-import { useRouter } from "next/navigation";
 import ProjectNavbar from "../(navigation)/ProjectNavbar";
 
 const Projects = () => {
-  const textScreen =
-    "This is a webpage project. Lorem ipsum etc and all that JAZZ if you get my drift";
-  const textPhone =
-    "This is a SmartPhone project. Lorem ipsum etc and all that JAZZ if you get my drift";
-
-  const [projects, setProjects] = useState<Project[] | null>();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const categoryProjects = await getProjectCategories("website");
-      console.log(categoryProjects);
-      setProjects(categoryProjects);
-    };
-
-    fetchData();
-  }, []);
-
-  const router = useRouter();
-
-  const handleNavigation = (path: string) => {
-    router.push(path);
-  };
 
   return (
     <div className="flex flex-col gap-20 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
@@ -40,7 +13,6 @@ const Projects = () => {
         <CategoryShowcaseWebsite
           label={"Websites"}
           category={"website"}
-          gridNumber={2}
         />
       </section>
 
@@ -48,7 +20,6 @@ const Projects = () => {
         <CategoryShowcase
           label={"Mobile Projects"}
           category={"mobile"}
-          gridNumber={3}
         />
       </section>
 
@@ -56,7 +27,6 @@ const Projects = () => {
         <CategoryShowcaseWebsite
           label={"Diverse"}
           category={"diverse"}
-          gridNumber={2}
         />
       </section>
     </div>

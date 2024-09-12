@@ -1,6 +1,5 @@
 "use client"
 import { useEffect } from "react";
-import Navbar from "./components/(navigation)/Navbar";
 import About from "./components/(pages)/About";
 import Education from "./components/(pages)/Education";
 import Projects from "./components/(pages)/Projects";

@@ -4,18 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  imageUrl: any;
+  imageUrl: string;
   textDescription: string;
   layout: string;
+  slug: string,
 };
 
-const ProjectImageCard = ({ imageUrl, textDescription, layout }: Props) => {
+const ProjectImageCard = ({ imageUrl, textDescription, layout, slug }: Props) => {
   const [hideDisplayInfo, setHideDisplayInfo] = useState(true);
-
+  console.log("imageUrl", imageUrl)
   return (
     <div className="relative flex flex-col items-start sm:items-center justify-center w-full h-auto overflow-hidden">
       <div className="relative w-full h-full p-2 sm:p-0">
-        <Link href={`../Project/${"project one"}`}>
+        <Link href={`../Project/${slug}`}>
           <Image
             src={imageUrl}
             alt={"Project Image"}
