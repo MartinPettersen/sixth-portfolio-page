@@ -26,9 +26,14 @@ const CategoryShowcase = ({ label, category }: Props) => {
       <h1 className="font-manrope text-2xl pb-20">{label}</h1>
       {projects ? (
         <div
-          className={`grid grid-cols-1 sm:grid-cols-3 gap-y-80 gap-x-40  items-center justify-center sm:pl-0`}
+          className={`grid grid-cols-1 sm:grid-cols-6 gap-y-80 gap-x-40  items-center justify-center sm:pl-0`}
+        
         >
           {projects.map((project, index) => (
+            <div
+            key={index}
+            className={`col-span-2  max-w-full ${index % 2 === 0 && (index === projects.length - 1 || index === projects.length - 2) ? 'col-span-3 ' : ''} ${(index -1) % 3 === 0 && (index === projects.length - 1 || index === projects.length - 2) ? 'col-span-3' : ''}`}
+          >
             <div key={index} className="flex items-center justify-center">
               <div className="w-[200px] h-[200px] flex items-center justify-center">
                 <ProjectImageCard
@@ -39,6 +44,8 @@ const CategoryShowcase = ({ label, category }: Props) => {
                 />
               </div>
             </div>
+            </div>
+
           ))}
         </div>
       ) : null}
