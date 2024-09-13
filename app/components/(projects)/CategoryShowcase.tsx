@@ -26,7 +26,7 @@ const CategoryShowcase = ({ label, category }: Props) => {
       <h1 className="font-manrope text-2xl pb-20">{label}</h1>
       {projects ? (
         <div
-          className={`grid grid-cols-1 sm:grid-cols-3 gap-y-80 gap-x-40  items-center justify-center sm:pl-4`}
+          className={`grid grid-cols-1 sm:grid-cols-3 gap-y-80 gap-x-40  items-center justify-center sm:pl-0`}
         >
           {projects.map((project, index) => (
             <div key={index} className="flex items-center justify-center">

@@ -45,7 +45,7 @@ const ProjectPage = ({ slug }: Props) => {
             >
               Github
             </Link>
-            {project.hostLinks.length > 0 ? (
+            {Array.isArray(project.hostLinks) && project.hostLinks.length > 0 ? (
               <Link
                 href={project.hostLinks[0]}
                 target="_blank"
@@ -60,7 +60,7 @@ const ProjectPage = ({ slug }: Props) => {
             {project.projectInfo}
           </p>
           <div
-            className={`grid grid-cols-2 sm:grid-cols-6 gap-y-4 gap-x-2  items-center justify-center sm:pl-4`}
+            className={`grid grid-cols-2 sm:grid-cols-6 gap-y-4 gap-x-2  items-center justify-center sm:pl-0`}
           >
             {project.tech.map((tech, index) => (
                 <div key={index}>{tech}</div>
