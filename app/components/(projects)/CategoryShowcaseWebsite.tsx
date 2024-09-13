@@ -21,16 +21,21 @@ const CategoryShowcase = ({ label, category }: Props) => {
     fetchData();
   }, []);
 
+  // style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
   return (
     <div className="flex flex-col gap-10 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
       <h1 className="font-manrope text-2xl">{label}</h1>
       {projects ? (
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-y-40 gap-x-20  items-center justify-center sm:pl-0`}
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-y-40 gap-x-20  items-center justify-items-center  sm:pl-0`}
+ 
         >
 
           {projects.map((project, index) => (
-
+            <div
+              key={index}
+              className={`max-w-[600px] ${index % 2 === 0 && index === projects.length - 1 ? 'col-span-2' : ''}`}
+            >
             <ProjectImageCard
             imageUrl={project.image}
             textDescription={project.projectInfo}
@@ -38,6 +43,7 @@ const CategoryShowcase = ({ label, category }: Props) => {
             slug={project.slug}
             key={index}
             />
+            </div>
           ))}
         </div>
       ) : null}
