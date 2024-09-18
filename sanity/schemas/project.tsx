@@ -29,6 +29,12 @@ const project = {
       type: "string",
     },
     {
+      title: "Content",
+      name: "content",
+      type: "array",
+      of: [{ type: "block" }]
+    },
+    {
       name: "githubLinks",
       titles: "GithubLinks",
       type: "array",

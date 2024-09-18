@@ -16,8 +16,8 @@ const Education = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-20 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
-      <h1 className="font-manrope text-5xl">Education</h1>
+    <div className="flex flex-col gap-20  min-h-screen min-w-screen items-center justify-center pb-20">
+      <h1 className="font-manrope text-5xl font-bold">Education</h1>
 
       {education ? (
         <div className="flex flex-col sm:flex-row items-center justify-center pl-0">
@@ -40,6 +40,7 @@ const Education = () => {
           </div>
         </div>
       ) : null}
+      <div className="bg-[#bae6fd] rounded-xl shadow-lg hover:shadow-inner p-2 w-[142px] flex items-center justify-center border-2 border-solid border-[#52525b] hover:cursor-pointer">Download CV</div>
     </div>
   );
 };

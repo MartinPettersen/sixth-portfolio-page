@@ -15,8 +15,8 @@ const About = () => {
 
 
   return (
-    <div className="flex flex-col gap-20 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
-      <h1 className="font-manrope text-5xl">About</h1>
+    <div className="flex flex-col gap-20  min-h-screen min-w-screen items-center justify-center pb-20">
+      <h1 className="font-manrope text-5xl font-bold">About</h1>
       <p className="font-nunito w-[90%] sm:w-[60%]">{aboutText}</p>
 
     </div>

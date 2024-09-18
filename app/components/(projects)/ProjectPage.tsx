@@ -4,6 +4,8 @@ import { Project } from "@/types/Project";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { PortableText } from "@portabletext/react";
+import PortableTextSerializer from "../(sanity)/PortableTextSerializer";
 
 type Props = {
   slug: string;
@@ -15,7 +17,7 @@ const ProjectPage = ({ slug }: Props) => {
   useEffect(() => {
     const fetchData = async () => {
       const projectInfo = await getProject(slug);
-      console.log(projectInfo);
+      console.log("projectInfo", projectInfo);
       console.log("project.image", projectInfo.image);
       setProject(projectInfo);
     };
@@ -24,18 +26,18 @@ const ProjectPage = ({ slug }: Props) => {
   }, [slug]);
 
   return (
-    <div className="flex font-bold min-h-screen min-w-screen items-center justify-center py-20">
+    <div className="flex min-h-screen min-w-screen items-center justify-center py-20 ">
       {project ? (
-        <div className="flex flex-col gap-20 items-center justify-center">
-          <h1 className="font-manrope text-5xl">{project.name}</h1>
+        <div className="flex flex-col gap-10 items-center justify-center ">
+          <h1 className="font-manrope text-5xl font-bold">{project.name}</h1>
           <Image
             src={project.image}
             alt={project.alt}
             layout={"static"}
- 
             width={800}
             height={800}
-            className="h-[500px] object-contain object-center mt-3 aspect-auto "          />
+            className="h-[500px] object-contain object-center mt-3 aspect-auto "
+          />
 
           <div className="flex flex-row gap-10">
             <Link
@@ -45,7 +47,8 @@ const ProjectPage = ({ slug }: Props) => {
             >
               Github
             </Link>
-            {Array.isArray(project.hostLinks) && project.hostLinks.length > 0 ? (
+            {Array.isArray(project.hostLinks) &&
+            project.hostLinks.length > 0 ? (
               <Link
                 href={project.hostLinks[0]}
                 target="_blank"
@@ -57,15 +60,17 @@ const ProjectPage = ({ slug }: Props) => {
           </div>
 
           <p className="font-nunito max-w-[90%] sm:max-w-[60%]">
-            {project.projectInfo}
+            <PortableText
+              value={project.content}
+              components={PortableTextSerializer}
+            />
           </p>
           <div
-            className={`grid grid-cols-2 sm:grid-cols-6 gap-y-4 gap-x-2  items-center justify-center sm:pl-0`}
+            className={`grid grid-cols-2 sm:grid-cols-6 gap-y-4 gap-x-2 justify-items-center text-center  items-center  justify-center `}
           >
             {project.tech.map((tech, index) => (
-                <div key={index}>{tech}</div>
+              <div key={index}>{tech}</div>
             ))}
-
           </div>
         </div>
       ) : null}

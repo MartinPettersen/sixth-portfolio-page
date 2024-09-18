@@ -27,7 +27,7 @@ const ProjectImageCard = ({ imageUrl, textDescription, layout, slug }: Props) =>
           />
 
           <div className="absolute group inset-0 flex items-center justify-center hover:bg-black hover:bg-opacity-70">
-            <p className="font-nunito opacity-0 group-hover:opacity-100 text-[#F2F2F2] p-2 text-center">
+            <p className="font-nunito font-normal opacity-0 group-hover:opacity-100 text-[#F2F2F2] p-2 text-center">
               {textDescription}
             </p>
           </div>

@@ -7,6 +7,7 @@ export type Project = {
     slug: string;
     category: string;
     projectInfo: string;
+    content: PortableTextBlock[];
     information: PortableTextBlock[];
     tech: string[];
     githubLinks: string[];

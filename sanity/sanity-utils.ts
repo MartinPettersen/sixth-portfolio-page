@@ -68,6 +68,7 @@ export async function getProject(slug: string): Promise<Project> {
             'slug': slug.current,
             category,
             projectInfo,
+            content,
             information,
             tech,
             githubLinks,
