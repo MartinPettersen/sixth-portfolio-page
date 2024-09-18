@@ -21,7 +21,6 @@ const CategoryShowcase = ({ label, category }: Props) => {
     fetchData();
   }, []);
 
-  // style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
   return (
     <div className="flex flex-col gap-10 font-bold min-h-screen min-w-screen items-center justify-center pb-20">
       <h1 className="font-manrope text-2xl">{label}</h1>
