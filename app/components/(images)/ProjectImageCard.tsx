@@ -14,7 +14,7 @@ const ProjectImageCard = ({ imageUrl, textDescription, layout, slug }: Props) =>
   const [hideDisplayInfo, setHideDisplayInfo] = useState(true);
   console.log("imageUrl", imageUrl)
   return (
-    <div className="relative flex flex-col items-start sm:items-center justify-center w-full h-auto overflow-hidden">
+    <div className="relative flex shadow-lg hover:shadow-none flex-col items-start sm:items-center justify-center w-full h-auto overflow-hidden">
       <div className="relative w-full h-full p-2 sm:p-0">
         <Link href={`../Project/${slug}`}>
           <Image

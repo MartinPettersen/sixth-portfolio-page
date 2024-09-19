@@ -40,7 +40,9 @@ const Education = () => {
           </div>
         </div>
       ) : null}
+      {/* 
       <div className="bg-[#bae6fd] rounded-xl shadow-lg hover:shadow-inner p-2 w-[142px] flex items-center justify-center border-2 border-solid border-[#52525b] hover:cursor-pointer">Download CV</div>
+      */}
     </div>
   );
 };
