@@ -18,14 +18,14 @@ const Projects = () => {
 
       <section id="mobile" className="snap-start">
         <CategoryShowcase
-          label={"Mobile Projects"}
+          label={"Smartphone Projects"}
           category={"mobile"}
         />
       </section>
 
       <section id="diverse" className="snap-start">
         <CategoryShowcaseWebsite
-          label={"Diverse"}
+          label={"Miscellaneous"}
           category={"diverse"}
         />
       </section>

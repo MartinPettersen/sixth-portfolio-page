@@ -16,6 +16,7 @@ export async function getAbout(): Promise<About[]> {
             aboutInfo,
             information,
             aboutInfoNorwegian,
+            aboutContent
         }`
     )
 }
@@ -31,9 +32,11 @@ export async function getEducation(): Promise<Education[]> {
             firstBach,
             firstBachInfo,
             firstBachInfoBlock,
+            firstBachLocation,
             secondBach,
             secondBachInfo,
-            secondBachInfoBlock
+            secondBachInfoBlock,
+            secondBachLocation
         }`
     )
 }

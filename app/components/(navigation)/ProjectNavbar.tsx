@@ -9,7 +9,7 @@ const ProjectNavbar = () => {
   };
 
   return (
-    <div className="font-manrope text-sm flex flex-row gap-4 top-4 sticky  text-[#52525b]   z-50 p-2 rounded-full">
+    <div className="font-manrope text-sm flex flex-row gap-4 top-4 sticky  text-[#52525b]  z-50 p-2 px-4 rounded-full bg-[rgba(242,242,242,0.5)] backdrop-blur-sm">
       <p
         className="hover:cursor-pointer "
         onClick={() => handleNavigation("/#websites")}
@@ -20,13 +20,13 @@ const ProjectNavbar = () => {
         className="hover:cursor-pointer"
         onClick={() => handleNavigation("/#mobile")}
       >
-        Mobile
+        Smartphone
       </p>
       <p
         className="hover:cursor-pointer"
         onClick={() => handleNavigation("/#diverse")}
       >
-        Diverse
+        Miscellaneous
       </p>
     </div>
   );

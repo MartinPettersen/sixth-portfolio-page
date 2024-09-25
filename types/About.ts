@@ -5,6 +5,6 @@ export type About = {
     _createdAt: Date;
     name: string;
     aboutInfo: string;
-    information: PortableTextBlock[];
+    aboutContent: PortableTextBlock[];
     aboutInfoNorwegian: string;
 }
